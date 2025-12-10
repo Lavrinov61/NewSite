@@ -126,6 +126,10 @@ def foto_na_document():
 def document_plus():
     return render_template("document_plus.html")
 
+@app.route("/compare_woled_qdoled", methods=["GET"])
+def compare_woled_qdoled():
+    return render_template("compare_woled_qdoled.html")
+
 @app.route("/sitemap.xml", methods=["GET"])
 def sitemap():
     """

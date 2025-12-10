@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOLED vs QD-OLED: Сравнение технологий</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 1.1em;
+        }
+        
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .tech-name {
+            font-weight: 700;
+            font-size: 1.2em;
+            color: #667eea;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        .pros, .cons {
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .pros {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .cons {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+        }
+        
+        .pros h4, .cons h4 {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .pros ul, .cons ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .pros li, .cons li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .pros li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+        
+        .cons li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #f44336;
+            font-weight: bold;
+        }
+        
+        .highlight-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .highlight-box strong {
+            color: #856404;
+        }
+        
+        @media (max-width: 768px) {
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-table {
+                font-size: 0.9em;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>WOLED vs QD-OLED</h1>
+            <p>Подробное сравнение технологий OLED-дисплеев</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Основные отличия</h2>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Характеристика</th>
+                            <th>WOLED</th>
+                            <th>QD-OLED</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Полное название</strong></td>
+                            <td>White OLED (Белый OLED)</td>
+                            <td>Quantum Dot OLED (Квантовые точки OLED)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Производитель</strong></td>
+                            <td>LG Display</td>
+                            <td>Samsung Display</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Структура пикселя</strong></td>
+                            <td>Белый OLED + цветные фильтры</td>
+                            <td>Синий OLED + квантовые точки</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Цветовая гамма</strong></td>
+                            <td>Хорошая (DCI-P3 ~95-98%)</td>
+                            <td>Отличная (DCI-P3 ~99-100%, Rec.2020)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Яркость</strong></td>
+                            <td>До 800-1000 нит (пиковая)</td>
+                            <td>До 1000-1500 нит (пиковая)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Контрастность</strong></td>
+                            <td>Бесконечная (OLED)</td>
+                            <td>Бесконечная (OLED)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Энергопотребление</strong></td>
+                            <td>Среднее</td>
+                            <td>Ниже (более эффективные квантовые точки)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Стоимость производства</strong></td>
+                            <td>Ниже (зрелая технология)</td>
+                            <td>Выше (новая технология)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Углы обзора</strong></td>
+                            <td>Отличные</td>
+                            <td>Отличные</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Время отклика</strong></td>
+                            <td>Мгновенное (<1 мс)</td>
+                            <td>Мгновенное (<1 мс)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Влияние на глаза</strong></td>
+                            <td>Среднее (белый свет содержит весь спектр)</td>
+                            <td>Среднее (синий OLED, но общий спектр сбалансирован)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="section">
+                <h2>Технические детали</h2>
+                
+                <h3>WOLED (White OLED)</h3>
+                <p>
+                    <strong>WOLED</strong> использует белые OLED-подсветку, которая проходит через цветные фильтры (RGB) 
+                    для создания цветного изображения. Каждый пиксель состоит из белого OLED-элемента и цветного фильтра.
+                </p>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Зрелая и проверенная технология</li>
+                            <li>Ниже стоимость производства</li>
+                            <li>Широкое распространение</li>
+                            <li>Отличная однородность цвета</li>
+                            <li>Долгий срок службы</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Цветовой фильтр поглощает часть света</li>
+                            <li>Меньшая пиковая яркость</li>
+                            <li>Цветовая гамма немного уступает QD-OLED</li>
+                            <li>Менее эффективное использование энергии</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>QD-OLED (Quantum Dot OLED)</h3>
+                <p>
+                    <strong>QD-OLED</strong> использует синие OLED-пиксели в качестве подсветки, которые возбуждают 
+                    квантовые точки (quantum dots) для создания красного и зеленого цветов. Синий цвет идет напрямую 
+                    от OLED-пикселя.
+                </p>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Превосходная цветовая гамма (близка к Rec.2020)</li>
+                            <li>Выше пиковая яркость</li>
+                            <li>Более эффективное использование энергии</li>
+                            <li>Более чистые и насыщенные цвета</li>
+                            <li>Лучшая передача HDR-контента</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Выше стоимость производства</li>
+                            <li>Новая технология (меньше опыта)</li>
+                            <li>Ограниченное количество производителей</li>
+                            <li>Потенциальные проблемы с выгоранием синих пикселей</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Ключевые различия</h2>
+                
+                <h3>1. Технология создания цвета</h3>
+                <p>
+                    <strong>WOLED:</strong> Белый свет → цветные фильтры → RGB цвета<br>
+                    <strong>QD-OLED:</strong> Синий свет → квантовые точки → RGB цвета
+                </p>
+                
+                <h3>2. Цветовая точность</h3>
+                <p>
+                    QD-OLED обеспечивает более широкую цветовую гамму благодаря использованию квантовых точек, 
+                    которые могут излучать очень чистые и насыщенные цвета. WOLED ограничен цветовыми фильтрами, 
+                    которые поглощают часть света.
+                </p>
+                
+                <h3>3. Яркость</h3>
+                <p>
+                    QD-OLED может достигать более высокой пиковой яркости, так как квантовые точки более эффективно 
+                    преобразуют свет. В WOLED часть света теряется при прохождении через цветные фильтры.
+                </p>
+                
+                <h3>4. Энергоэффективность</h3>
+                <p>
+                    QD-OLED более энергоэффективен, поскольку квантовые точки преобразуют свет с меньшими потерями, 
+                    чем цветные фильтры в WOLED.
+                </p>
+                
+                <h3>5. Стоимость</h3>
+                <p>
+                    WOLED дешевле в производстве благодаря зрелости технологии и массовому производству. 
+                    QD-OLED пока дороже из-за новизны и сложности производства квантовых точек.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2>Влияние на глаза и синий спектр (технический анализ)</h2>
+                
+                <h3>Как работает WOLED на самом деле:</h3>
+                <p>
+                    <strong>WOLED структура:</strong> Синий OLED + желтый люминофор → белый свет → RGB цветные фильтры
+                </p>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Белый OLED создается из <strong>синего OLED</strong> + люминофор (обычно YAG:Ce)</li>
+                    <li>Этот белый свет содержит весь спектр, включая синий</li>
+                    <li>Затем свет проходит через <strong>цветные фильтры</strong> (RGB)</li>
+                    <li>Для синего пикселя: синий свет проходит через синий фильтр (пропускает синий, поглощает остальное)</li>
+                    <li>Для красного/зеленого пикселей: их фильтры <strong>поглощают синий свет</strong></li>
+                </ul>
+                <p>
+                    <strong>Результат:</strong> Синий свет в WOLED проходит через фильтр, который его пропускает, 
+                    но часть энергии теряется. Однако синий спектр присутствует и излучается.
+                </p>
+                
+                <h3>Как работает QD-OLED на самом деле:</h3>
+                <p>
+                    <strong>QD-OLED структура:</strong> Синий OLED напрямую + квантовые точки для красного/зеленого
+                </p>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Синий OLED излучает <strong>синий свет напрямую</strong> (без фильтров)</li>
+                    <li>Часть синего света возбуждает квантовые точки → преобразуется в красный и зеленый</li>
+                    <li>Остальной синий свет идет напрямую для синего цвета</li>
+                    <li><strong>Нет цветных фильтров</strong> — нет потерь на поглощение</li>
+                </ul>
+                <p>
+                    <strong>Результат:</strong> Синий свет в QD-OLED идет напрямую от источника без потерь на фильтрах.
+                </p>
+                
+                <div class="highlight-box" style="background: #e3f2fd; border-left-color: #2196f3;">
+                    <strong>Технический вывод:</strong> QD-OLED теоретически может иметь более интенсивный синий свет, 
+                    потому что синий идет напрямую без потерь на фильтрах. В WOLED синий свет тоже присутствует, 
+                    но часть его поглощается фильтрами красного/зеленого пикселей, а для синего пикселя проходит через фильтр с потерями.
+                </div>
+                
+                <h3>Что действительно влияет на усталость глаз:</h3>
+                <ul style="margin: 20px 0; padding-left: 30px;">
+                    <li><strong>Яркость экрана</strong> — главный фактор. Слишком высокая яркость утомляет глаза независимо от технологии</li>
+                    <li><strong>Мерцание (PWM)</strong> — оба типа OLED могут использовать ШИМ для регулировки яркости, что может вызывать усталость</li>
+                    <li><strong>Контрастность</strong> — высокая контрастность OLED (бесконечная) может быть утомительной в темноте</li>
+                    <li><strong>Время использования</strong> — длительная работа за любым экраном утомляет глаза</li>
+                    <li><strong>Расстояние до экрана</strong> — слишком близкое расположение увеличивает нагрузку</li>
+                </ul>
+                
+                <h3>Сравнение влияния на глаза:</h3>
+                <table class="comparison-table" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Фактор</th>
+                            <th>WOLED</th>
+                            <th>QD-OLED</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Синий спектр</strong></td>
+                            <td>Присутствует (в составе белого света)</td>
+                            <td>Присутствует (синий OLED)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Интенсивность синего</strong></td>
+                            <td>Средняя (синий проходит через фильтр с потерями)</td>
+                            <td>Потенциально выше (синий идет напрямую без фильтров)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Потери на фильтрах</strong></td>
+                            <td>Есть (цветные фильтры поглощают часть света)</td>
+                            <td>Нет (нет цветных фильтров)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Пиковая яркость</strong></td>
+                            <td>Ниже (800-1000 нит)</td>
+                            <td>Выше (1000-1500 нит) — может быть утомительнее</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Фильтры синего света</strong></td>
+                            <td>Доступны в настройках (Night Mode)</td>
+                            <td>Доступны в настройках (Night Mode)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Мерцание (PWM)</strong></td>
+                            <td>Зависит от модели</td>
+                            <td>Зависит от модели</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Что это значит для глаз:</h3>
+                <p>
+                    <strong>Технически:</strong> QD-OLED может иметь более интенсивный синий свет из-за отсутствия фильтров. 
+                    Однако на практике разница может быть незначительной, так как:
+                </p>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Производители настраивают яркость и цветовой баланс</li>
+                    <li>В WOLED синий свет тоже присутствует (создается синим OLED + люминофор)</li>
+                    <li>Главный фактор — общая яркость экрана, а не только синий спектр</li>
+                </ul>
+                
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <strong>Честный вывод:</strong> Технически QD-OLED может иметь более чистый и интенсивный синий свет 
+                    из-за отсутствия фильтров. Но на практике разница в воздействии на глаза минимальна, так как обе технологии 
+                    используют синий OLED в основе. Важнее правильно настроить яркость, использовать Night Mode и делать перерывы.
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <strong>Вывод:</strong> QD-OLED предлагает превосходное качество изображения с лучшей цветовой гаммой 
+                и яркостью, но стоит дороже. WOLED остается отличным выбором с проверенной надежностью и более 
+                доступной ценой. Выбор зависит от ваших приоритетов: максимальное качество изображения или 
+                оптимальное соотношение цена/качество.
+            </div>
+            
+            <div class="section">
+                <h2>Практические проблемы и решения</h2>
+                
+                <div class="highlight-box" style="background: #ffebee; border-left-color: #f44336;">
+                    <strong>Реальная проблема:</strong> Некоторые пользователи QD-OLED мониторов (например, Samsung G6 OLED) 
+                    испытывают боли вокруг глаз уже через несколько секунд использования. Это серьезная проблема, требующая решения.
+                </div>
+                
+                <h3>Возможные причины:</h3>
+                <ol style="margin: 20px 0; padding-left: 30px;">
+                    <li><strong>PWM мерцание (ШИМ)</strong> — монитор мерцает для регулировки яркости, что может вызывать сильную усталость глаз</li>
+                    <li><strong>Слишком высокая яркость</strong> — QD-OLED может быть очень ярким по умолчанию</li>
+                    <li><strong>Интенсивный синий свет</strong> — синий OLED идет напрямую без фильтров</li>
+                    <li><strong>Высокая контрастность в темноте</strong> — бесконечный контраст может быть слишком агрессивным</li>
+                    <li><strong>Неправильные настройки</strong> — заводские настройки могут быть неоптимальными</li>
+                </ol>
+                
+                <h3>Что делать (пошаговая инструкция):</h3>
+                
+                <h4>1. Снизить яркость до минимума</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Начните с яркости 0-20%</li>
+                    <li>Увеличивайте постепенно, пока не найдете комфортный уровень</li>
+                    <li>Для работы в темноте: 0-10% может быть достаточно</li>
+                </ul>
+                
+                <h4>2. Включить режим защиты глаз</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Найдите в настройках монитора "Eye Care", "Comfort View" или "Blue Light Filter"</li>
+                    <li>Включите на максимум или используйте "Warm" цветовой профиль</li>
+                    <li>Это снизит интенсивность синего света</li>
+                </ul>
+                
+                <h4>3. Проверить PWM мерцание</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Попробуйте установить яркость на 100% (если монитор использует DC dimming на максимальной яркости)</li>
+                    <li>Или найдите настройку "Flicker-Free" / "DC Dimming" в меню</li>
+                    <li>Если мерцание есть — это может быть главная причина</li>
+                </ul>
+                
+                <h4>4. Настроить цветовую температуру (если доступно)</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>Проблема:</strong> Многие OLED мониторы (включая Samsung G6) не позволяют менять цветовую температуру и гамму</li>
+                    <li>Это ограничение прошивки/меню монитора</li>
+                    <li><strong>Решение:</strong> Используйте Windows Night Light или f.lux для снижения синего на уровне ОС</li>
+                    <li>Или используйте видеодрайвер (NVIDIA/AMD) для настройки цветов</li>
+                </ul>
+                
+                <h4>5. Использовать Windows Night Light / f.lux (ОБЯЗАТЕЛЬНО, если нет настроек на мониторе)</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>Это единственный способ</strong> снизить синий свет, если монитор не позволяет менять температуру</li>
+                    <li>Включите Night Light в Windows и установите на максимум (не только ночью, а всегда)</li>
+                    <li>Или установите f.lux и настройте на максимальное снижение синего (например, "Reduce eyestrain")</li>
+                    <li>Это критично для OLED без настроек температуры</li>
+                </ul>
+                
+                <h4>5.1. Альтернатива: настройка через видеодрайвер</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>NVIDIA:</strong> Панель управления → Дисплей → Изменение разрешения → Использовать настройки NVIDIA → Цвет → Снизить синий канал</li>
+                    <li><strong>AMD:</strong> AMD Radeon Software → Дисплей → Цветовая температура → Сдвинуть в сторону "Warm"</li>
+                    <li>Это может помочь, если монитор не дает настроек</li>
+                </ul>
+                
+                <h4>6. Увеличить расстояние до монитора</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Отодвиньте монитор дальше (минимум 60-70 см от глаз)</li>
+                    <li>Уменьшите масштаб в Windows, если нужно</li>
+                </ul>
+                
+                <h4>7. Освещение в комнате</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Не работайте в полной темноте</li>
+                    <li>Включите мягкий свет за монитором (bias lighting)</li>
+                    <li>Это снизит контраст и нагрузку на глаза</li>
+                </ul>
+                
+                <h4>8. Если ничего не помогает</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Проверьте, нет ли у вас светочувствительности к конкретному спектру</li>
+                    <li>Рассмотрите возврат монитора — если боли начинаются через секунды, это не нормально</li>
+                    <li>Возможно, QD-OLED с его прямым синим светом вам не подходит</li>
+                    <li>WOLED с фильтрами может быть более комфортным вариантом</li>
+                </ul>
+                
+                <div class="highlight-box" style="background: #ffebee; border-left-color: #f44336;">
+                    <strong>Критическая проблема:</strong> Многие OLED мониторы (особенно игровые модели) имеют очень ограниченные настройки — 
+                    нельзя менять цветовую температуру, гамму, иногда даже яркость ограничена. Это серьезный недостаток для людей, 
+                    чувствительных к синему свету. Если монитор не дает настроек, единственный выход — Windows Night Light/f.lux 
+                    или настройка через видеодрайвер. Если и это не помогает — монитор может быть несовместим с вашими глазами.
+                </div>
+                
+                <h3>Почему OLED мониторы часто не дают настроек:</h3>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>Игровые модели</strong> — фокус на производительность, а не на комфорт</li>
+                    <li><strong>Калибровка на заводе</strong> — производитель считает, что настройки не нужны</li>
+                    <li><strong>Упрощенное меню</strong> — меньше настроек = проще интерфейс</li>
+                    <li><strong>Прошивка</strong> — ограничения заложены в прошивку монитора</li>
+                </ul>
+                
+                <p style="margin-top: 20px; color: #d32f2f; font-weight: bold;">
+                    <strong>Вывод:</strong> Если монитор не дает настроек температуры/гаммы, а Windows Night Light не помогает — 
+                    это может быть несовместимость технологии с вашими глазами. WOLED мониторы (например, LG) часто имеют больше настроек.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2>Профессиональная работа с цветом (Photoshop, обработка лиц)</h2>
+                
+                <div class="highlight-box" style="background: #e3f2fd; border-left-color: #2196f3;">
+                    <strong>Конфликт потребностей:</strong> Для точной работы с цветом нужна правильная калибровка (6500K, sRGB/Adobe RGB), 
+                    но для комфорта глаз нужна теплая температура. Windows Night Light/f.lux искажают цвета и не подходят для профессиональной работы.
+                </div>
+                
+                <h3>Проблема с Samsung G6 OLED для цветокоррекции:</h3>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>Нет настроек температуры/гаммы</strong> — нельзя калибровать под стандарты</li>
+                    <li><strong>Боли в глазах</strong> — нельзя работать долго</li>
+                    <li><strong>QD-OLED</strong> — отличная цветовая гамма, но прямой синий свет без фильтров</li>
+                    <li><strong>Windows Night Light искажает цвета</strong> — не подходит для работы</li>
+                </ul>
+                
+                <h3>Возможные решения:</h3>
+                
+                <h4>1. Калибровка через видеодрайвер (компромисс)</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>NVIDIA:</strong> Панель управления → Дисплей → Изменение разрешения → Использовать настройки NVIDIA → Цвет</li>
+                    <li>Настройте цветовую температуру на 6500K (стандарт для sRGB)</li>
+                    <li>Слегка снизьте синий канал (на 5-10%), чтобы уменьшить нагрузку, но сохранить точность</li>
+                    <li><strong>Минус:</strong> Это все равно искажение, но меньшее, чем Night Light</li>
+                </ul>
+                
+                <h4>2. Использовать калибровочный профиль ICC</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Создайте или скачайте ICC профиль для вашего монитора</li>
+                    <li>Установите его в Windows (Параметры → Система → Дисплей → Расширенные настройки дисплея)</li>
+                    <li>В Photoshop: Edit → Color Settings → убедитесь, что используется правильный профиль</li>
+                    <li><strong>Проблема:</strong> Это не решит проблему с синим светом, но улучшит точность цветов</li>
+                </ul>
+                
+                <h4>3. Работать короткими сессиями</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Работайте с точными цветами только во время активной обработки</li>
+                    <li>Делайте перерывы каждые 15-20 минут</li>
+                    <li>В перерывах включайте Night Light для отдыха глаз</li>
+                    <li><strong>Не идеально, но может помочь</strong></li>
+                </ul>
+                
+                <h4>4. Использовать внешний калибратор (если доступен)</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Datacolor Spyder, X-Rite i1Display — могут создать кастомный профиль</li>
+                    <li>Но если монитор не дает настроек, калибратор не сможет их изменить</li>
+                    <li>Профиль может помочь с точностью, но не с комфортом глаз</li>
+                </ul>
+                
+                <h4>5. Рассмотреть альтернативу — WOLED или профессиональный IPS</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>LG WOLED мониторы</strong> (например, LG 27GR95QE или профессиональные модели)</li>
+                    <li>Обычно имеют больше настроек (температура, гамма, калибровка)</li>
+                    <li>WOLED с фильтрами может быть комфортнее для глаз</li>
+                    <li>Или <strong>профессиональный IPS</strong> с калибровкой (EIZO, BenQ SW, Dell UltraSharp)</li>
+                    <li>IPS не имеет проблем с синим светом и дает полный контроль над настройками</li>
+                </ul>
+                
+                <div class="highlight-box" style="background: #fff3cd; border-left-color: #ffc107;">
+                    <strong>Честный вывод для цветокоррекции:</strong> Samsung G6 OLED — игровой монитор, не предназначен для профессиональной работы с цветом. 
+                    Если вам нужен точный цвет для обработки лиц в Photoshop, и при этом комфорт для глаз, рассмотрите:
+                    <ul style="margin: 10px 0; padding-left: 25px;">
+                        <li>Профессиональный WOLED монитор с настройками (LG)</li>
+                        <li>Профессиональный IPS монитор с калибровкой (EIZO, BenQ SW)</li>
+                        <li>Или использовать G6 только для игр, а для работы — отдельный калиброванный монитор</li>
+                    </ul>
+                </div>
+                
+                <h3>Сравнение для профессиональной работы:</h3>
+                <table class="comparison-table" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Характеристика</th>
+                            <th>Samsung G6 OLED (игровой)</th>
+                            <th>LG WOLED (профессиональный)</th>
+                            <th>IPS (профессиональный)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Настройки температуры/гаммы</strong></td>
+                            <td>❌ Нет</td>
+                            <td>✅ Обычно есть</td>
+                            <td>✅ Полный контроль</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Калибровка</strong></td>
+                            <td>❌ Ограничена</td>
+                            <td>✅ Возможна</td>
+                            <td>✅ Полная</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Цветовая гамма</strong></td>
+                            <td>✅ Отличная (QD-OLED)</td>
+                            <td>✅ Хорошая (WOLED)</td>
+                            <td>✅ Хорошая (Adobe RGB)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Комфорт для глаз</strong></td>
+                            <td>❌ Проблемы у некоторых</td>
+                            <td>⚠️ Средний</td>
+                            <td>✅ Обычно лучше</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Точность цветов</strong></td>
+                            <td>⚠️ Зависит от модели</td>
+                            <td>✅ Хорошая</td>
+                            <td>✅ Отличная (с калибровкой)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Для Photoshop</strong></td>
+                            <td>❌ Не предназначен</td>
+                            <td>✅ Подходит</td>
+                            <td>✅ Идеально</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="section">
+                <h2>Конкретные модели и их возможности</h2>
+                
+                <h3>ASUS XG27AQDMG (27" WOLED, 1440p, 240Hz)</h3>
+                <div class="highlight-box" style="background: #e8f5e9; border-left-color: #4caf50;">
+                    <strong>Отличные новости:</strong> Это WOLED, а не QD-OLED! И ASUS обычно дает больше настроек, чем Samsung!
+                </div>
+                
+                <h4>Что обычно есть в ASUS мониторах:</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>Настройки гаммы</strong> — обычно есть (2.2, 2.4, sRGB и т.д.)</li>
+                    <li><strong>Цветовая температура</strong> — обычно можно менять (Cool, Normal, Warm, Custom)</li>
+                    <li><strong>Настройки RGB</strong> — можно настраивать отдельные каналы</li>
+                    <li><strong>Режимы цветов</strong> — sRGB, DCI-P3, Adobe RGB (если поддерживается)</li>
+                    <li><strong>Покрытие</strong> — обычно глянцевое (без матового покрытия) ✅</li>
+                </ul>
+                
+                <h4>Преимущества WOLED:</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>WOLED с фильтрами</strong> — синий свет проходит через фильтры, может быть комфортнее для глаз</li>
+                    <li><strong>Не прямой синий свет</strong> — в отличие от QD-OLED (Samsung G6)</li>
+                    <li><strong>Может решить проблему</strong> с болями в глазах, которые были с Samsung G6</li>
+                    <li><strong>Игровой монитор</strong> — но с настройками для работы</li>
+                </ul>
+                
+                <h4>Рекомендации для ASUS XG27AQDMG:</h4>
+                <ol style="margin: 15px 0; padding-left: 30px;">
+                    <li>Проверьте меню монитора — должны быть настройки гаммы и температуры</li>
+                    <li>Установите гамму 2.2 (стандарт для sRGB) или 2.4 (для видео)</li>
+                    <li>Настройте цветовую температуру на 6500K (или режим sRGB, если есть)</li>
+                    <li>Слегка снизьте яркость (для комфорта глаз)</li>
+                    <li>Используйте режим sRGB, если он есть (для работы в Photoshop)</li>
+                </ol>
+                
+                <div class="highlight-box" style="background: #e8f5e9; border-left-color: #4caf50;">
+                    <strong>Отлично:</strong> ASUS XG27AQDMG — это WOLED, а не QD-OLED! Это может решить вашу проблему:
+                    <ul style="margin: 10px 0; padding-left: 25px;">
+                        <li>WOLED с фильтрами — синий свет проходит через фильтры, не прямой</li>
+                        <li>Может быть комфортнее для глаз, чем Samsung G6 (QD-OLED)</li>
+                        <li>Обычно есть настройки гаммы и температуры (проверьте перед покупкой!)</li>
+                        <li>Глянцевое покрытие (без матового) ✅</li>
+                    </ul>
+                    Это может быть именно то, что нужно для работы с цветом в Photoshop!
+                </div>
+                
+                <h3>Другие варианты с настройками гаммы и без матового покрытия:</h3>
+                
+                <h4>1. LG 27GR95QE (27" WOLED, 1440p, 240Hz)</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>Технология:</strong> WOLED (с фильтрами — может быть комфортнее)</li>
+                    <li><strong>Настройки:</strong> Обычно есть гамма, температура, RGB</li>
+                    <li><strong>Покрытие:</strong> Глянцевое</li>
+                    <li><strong>Плюс:</strong> WOLED может быть комфортнее для глаз, чем QD-OLED</li>
+                </ul>
+                
+                <h4>2. Alienware AW3423DWF (34" QD-OLED, ультраширокий)</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>Технология:</strong> QD-OLED</li>
+                    <li><strong>Настройки:</strong> Обычно есть гамма, температура</li>
+                    <li><strong>Покрытие:</strong> Глянцевое</li>
+                    <li><strong>Минус:</strong> Все еще QD-OLED (прямой синий свет)</li>
+                </ul>
+                
+                <h4>3. LG UltraFine (профессиональные IPS)</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>Технология:</strong> IPS (не OLED)</li>
+                    <li><strong>Назначение:</strong> Профессиональная работа с графикой</li>
+                    <li><strong>Калибровка:</strong> Заводская калибровка, отличная точность цветов</li>
+                    <li><strong>Настройки:</strong> Полный контроль (гамма, температура, RGB)</li>
+                    <li><strong>Покрытие:</strong> Обычно глянцевое (без матового) ✅</li>
+                    <li><strong>Плюсы:</strong> Нет проблем с синим светом, идеальная точность для Photoshop</li>
+                    <li><strong>Минусы:</strong> Не OLED (хуже контраст, но точнее цвета для работы)</li>
+                </ul>
+                
+                <h4>4. Другие профессиональные IPS</h4>
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li><strong>EIZO ColorEdge</strong> — полный контроль, глянец опционально</li>
+                    <li><strong>BenQ SW</strong> — профессиональные, с настройками</li>
+                    <li><strong>Dell UltraSharp</strong> — некоторые модели с глянцем</li>
+                </ul>
+                
+                <h3>Сравнение для ваших требований (графика, Photoshop):</h3>
+                <table class="comparison-table" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Модель</th>
+                            <th>Настройки гаммы</th>
+                            <th>Покрытие</th>
+                            <th>Технология</th>
+                            <th>Точность цветов</th>
+                            <th>Комфорт для глаз</th>
+                            <th>Для Photoshop</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>LG UltraFine</strong></td>
+                            <td>✅ Полный контроль</td>
+                            <td>✅ Глянцевое</td>
+                            <td>IPS</td>
+                            <td>✅✅ Отличная</td>
+                            <td>✅✅ Обычно лучше</td>
+                            <td>✅✅ Идеально</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ASUS XG27AQDMG</strong></td>
+                            <td>✅ Обычно есть</td>
+                            <td>✅ Глянцевое</td>
+                            <td>WOLED</td>
+                            <td>✅ Хорошая</td>
+                            <td>✅ Может быть комфортнее</td>
+                            <td>✅ Хороший вариант</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LG 27GR95QE</strong></td>
+                            <td>✅ Обычно есть</td>
+                            <td>✅ Глянцевое</td>
+                            <td>WOLED</td>
+                            <td>✅ Хорошая</td>
+                            <td>✅ Может быть комфортнее</td>
+                            <td>✅ Хороший вариант</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EIZO ColorEdge</strong></td>
+                            <td>✅ Полный контроль</td>
+                            <td>✅ Глянец опционально</td>
+                            <td>IPS</td>
+                            <td>✅✅ Отличная</td>
+                            <td>✅✅ Обычно лучше</td>
+                            <td>✅✅ Идеально</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>LG UltraFine vs ASUS XG27AQDMG для графики:</h3>
+                <table class="comparison-table" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Характеристика</th>
+                            <th>LG UltraFine (IPS)</th>
+                            <th>ASUS XG27AQDMG (WOLED)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Назначение</strong></td>
+                            <td>✅ Профессиональная графика</td>
+                            <td>⚠️ Игровой (но с настройками)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Точность цветов</strong></td>
+                            <td>✅✅ Отличная (заводская калибровка)</td>
+                            <td>✅ Хорошая (зависит от модели)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Настройки гаммы/температуры</strong></td>
+                            <td>✅✅ Полный контроль</td>
+                            <td>✅ Обычно есть</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Контрастность</strong></td>
+                            <td>⚠️ Обычная (1000:1)</td>
+                            <td>✅✅ Бесконечная (OLED)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Комфорт для глаз</strong></td>
+                            <td>✅✅ Обычно лучше (нет проблем с синим)</td>
+                            <td>✅ Может быть комфортнее (WOLED с фильтрами)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Покрытие</strong></td>
+                            <td>✅ Глянцевое</td>
+                            <td>✅ Глянцевое</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Для обработки лиц в Photoshop</strong></td>
+                            <td>✅✅ Идеально</td>
+                            <td>✅ Хорошо (если настройки есть)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Цена</strong></td>
+                            <td>⚠️ Обычно дороже</td>
+                            <td>✅ Может быть дешевле</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="highlight-box" style="background: #e3f2fd; border-left-color: #2196f3;">
+                    <strong>Честный вывод для графики:</strong>
+                    <ul style="margin: 10px 0; padding-left: 25px;">
+                        <li><strong>LG UltraFine (IPS)</strong> — лучше для профессиональной работы с цветом:
+                            <ul style="margin: 5px 0; padding-left: 20px;">
+                                <li>Предназначен для графики, не для игр</li>
+                                <li>Отличная точность цветов (заводская калибровка)</li>
+                                <li>Полный контроль над настройками</li>
+                                <li>Обычно комфортнее для глаз (нет проблем с синим светом)</li>
+                                <li>Идеально для обработки лиц в Photoshop</li>
+                            </ul>
+                        </li>
+                        <li><strong>ASUS XG27AQDMG (WOLED)</strong> — компромисс:
+                            <ul style="margin: 5px 0; padding-left: 20px;">
+                                <li>Игровой монитор, но с настройками</li>
+                                <li>WOLED может быть комфортнее для глаз, чем QD-OLED</li>
+                                <li>Бесконечный контраст (OLED)</li>
+                                <li>Может подойти, если нужен и игровой, и рабочий монитор</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <strong>Рекомендация:</strong> Если основная задача — обработка лиц в Photoshop, <strong>LG UltraFine</strong> будет лучшим выбором. 
+                    Если нужен универсальный монитор (игры + работа), то ASUS XG27AQDMG может подойти.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Сравнение конкретных моделей LG</h2>
+                
+                <h3>Ваши варианты:</h3>
+                <ol style="margin: 20px 0; padding-left: 30px;">
+                    <li><strong>LG UltraFine 27UP850K-W</strong></li>
+                    <li><strong>LG UltraGear 27GR93U-B</strong></li>
+                    <li><strong>LG UltraFine 27US500-W</strong></li>
+                    <li><strong>LG 27UP650-W</strong></li>
+                </ol>
+                
+                <h3>Детальное сравнение:</h3>
+                <table class="comparison-table" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Модель</th>
+                            <th>Серия</th>
+                            <th>Технология</th>
+                            <th>Разрешение</th>
+                            <th>Калибровка</th>
+                            <th>Настройки</th>
+                            <th>Для Photoshop</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>27UP850K-W</strong></td>
+                            <td>UltraFine</td>
+                            <td>IPS</td>
+                            <td>4K (3840×2160)</td>
+                            <td>✅ Заводская</td>
+                            <td>✅✅ Полный контроль</td>
+                            <td>✅✅ Лучший</td>
+                        </tr>
+                        <tr>
+                            <td><strong>27GR93U-B</strong></td>
+                            <td>UltraGear</td>
+                            <td>IPS (не OLED)</td>
+                            <td>4K (3840×2160)</td>
+                            <td>⚠️ Базовая</td>
+                            <td>✅ Есть</td>
+                            <td>⚠️ Игровой</td>
+                        </tr>
+                        <tr>
+                            <td><strong>27US500-W</strong></td>
+                            <td>UltraFine</td>
+                            <td>IPS</td>
+                            <td>4K (3840×2160)</td>
+                            <td>✅ Заводская</td>
+                            <td>✅✅ Полный контроль</td>
+                            <td>✅✅ Отличный</td>
+                        </tr>
+                        <tr>
+                            <td><strong>27UP650-W</strong></td>
+                            <td>Обычная</td>
+                            <td>IPS</td>
+                            <td>4K (3840×2160)</td>
+                            <td>⚠️ Базовая</td>
+                            <td>✅ Базовые</td>
+                            <td>⚠️ Средний</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Рекомендации по моделям:</h3>
+                
+                <h4>1. LG UltraFine 27UP850K-W ⭐ ЛУЧШИЙ ВЫБОР</h4>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Плюсы</h4>
+                        <ul>
+                            <li>UltraFine серия — профессиональная графика</li>
+                            <li>Заводская калибровка (ΔE < 2)</li>
+                            <li>Полный контроль: гамма, температура, RGB</li>
+                            <li>USB-C с питанием (90W)</li>
+                            <li>Отличная цветовая гамма (DCI-P3 95%)</li>
+                            <li>Глянцевое покрытие ✅</li>
+                            <li>Идеально для Photoshop</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Минусы</h4>
+                        <ul>
+                            <li>Обычно дороже</li>
+                            <li>60Hz (не для игр)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h4>2. LG UltraFine 27US500-W ⭐ ВТОРОЙ ВЫБОР</h4>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Плюсы</h4>
+                        <ul>
+                            <li>UltraFine серия — профессиональная</li>
+                            <li>Заводская калибровка</li>
+                            <li>Полный контроль настроек</li>
+                            <li>Глянцевое покрытие ✅</li>
+                            <li>Хорошо для Photoshop</li>
+                            <li>Может быть дешевле 27UP850K</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Минусы</h4>
+                        <ul>
+                            <li>Меньше портов (нет USB-C с питанием)</li>
+                            <li>60Hz</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h4>3. LG UltraGear 27GR93U-B ⚠️ НЕ ДЛЯ ГРАФИКИ</h4>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Плюсы</h4>
+                        <ul>
+                            <li>Высокая частота обновления (144Hz)</li>
+                            <li>Игровой монитор</li>
+                            <li>Есть настройки</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Минусы</h4>
+                        <ul>
+                            <li>Игровая серия — не для графики</li>
+                            <li>Базовая калибровка</li>
+                            <li>Может не иметь полного контроля</li>
+                            <li>Не предназначен для Photoshop</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h4>4. LG 27UP650-W ⚠️ БАЗОВАЯ МОДЕЛЬ</h4>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Плюсы</h4>
+                        <ul>
+                            <li>Дешевле</li>
+                            <li>4K разрешение</li>
+                            <li>Базовые настройки</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Минусы</h4>
+                        <ul>
+                            <li>Базовая калибровка</li>
+                            <li>Ограниченные настройки</li>
+                            <li>Не профессиональная серия</li>
+                            <li>Может не подойти для точной работы</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="background: #e8f5e9; border-left-color: #4caf50;">
+                    <strong>Финальная рекомендация для обработки лиц в Photoshop:</strong>
+                    <ol style="margin: 10px 0; padding-left: 25px;">
+                        <li><strong>LG UltraFine 27UP850K-W</strong> — ЛУЧШИЙ ВЫБОР
+                            <ul style="margin: 5px 0; padding-left: 20px;">
+                                <li>Профессиональная серия UltraFine</li>
+                                <li>Заводская калибровка (высокая точность)</li>
+                                <li>Полный контроль над настройками (гамма, температура, RGB)</li>
+                                <li>Глянцевое покрытие ✅</li>
+                                <li>Идеально для Photoshop</li>
+                            </ul>
+                        </li>
+                        <li><strong>LG UltraFine 27US500-W</strong> — ВТОРОЙ ВЫБОР (если 27UP850K дороже)
+                            <ul style="margin: 5px 0; padding-left: 20px;">
+                                <li>Тоже UltraFine серия</li>
+                                <li>Заводская калибровка</li>
+                                <li>Полный контроль настроек</li>
+                                <li>Может быть дешевле</li>
+                            </ul>
+                        </li>
+                        <li><strong>LG UltraGear 27GR93U-B</strong> — НЕ РЕКОМЕНДУЕТСЯ для графики (игровой)</li>
+                        <li><strong>LG 27UP650-W</strong> — НЕ РЕКОМЕНДУЕТСЯ (базовая модель, ограниченные настройки)</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Применение</h2>
+                <p>
+                    <strong>WOLED</strong> широко используется в телевизорах LG, мониторах и других устройствах. 
+                    Технология проверена временем и зарекомендовала себя как надежное решение.
+                </p>
+                <p>
+                    <strong>QD-OLED</strong> используется в премиальных телевизорах Samsung, игровых мониторах 
+                    и других устройствах высокого класса, где важна максимальная цветовая точность и яркость.
+                </p>
+                <p style="margin-top: 20px; color: #d32f2f;">
+                    <strong>Примечание:</strong> Некоторые пользователи могут быть чувствительны к QD-OLED из-за прямого синего света 
+                    без фильтров. Если возникают проблемы с глазами, рассмотрите WOLED как альтернативу.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
